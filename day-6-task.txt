@@ -1,0 +1,104 @@
+class movie{
+constructor(title='',studio='',rating='PG'){
+
+      this.title=title
+      this.studio=studio
+      this.rating=rating      
+}
+get(a=[],rating=''){
+return a.filter((e)=> e.rating===rating)
+}
+names(b=[],studio=''){
+return b.filter((e)=>e.studio===studio)
+}
+
+
+
+}
+const casinoroyal=new movie('casinoroyal','eonproduction','PG13')
+const msdhoni=new movie ('msdhoni','cricket','PG13');
+const sachinbilliondreams=new movie ('sachinbiliondreams','bcci','PG13')
+const avengers=new movie ('avengers:infinitywar','marvel','PG');
+const batman= new movie ('batman','dc','PG');
+const conjuring=new movie ('conjuring','horror','R');
+const it=new movie ('it','thriller','R');
+
+const array=[casinoroyal,msdhoni,sachinbilliondreams,avengers,batman,conjuring,it]
+console.log(batman.get(array,'PG'));
+console.log(sachinbilliondreams.names(array,'bcci'))
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class person{
+  consructor(name='',age='',gender='',DOB='',address='',city='',state='',pincode='',phonenumber=''){
+          this.name=name 
+          this.age=age
+          this.gender=gender
+          this.DOB=DOB
+          this.address=address
+          this.city=city
+          this.state=state
+          this.pincode=pincode
+          this.phonenumber=phonenumbar
+  }
+get(a=[],gender=''){
+return a.filter((e)=> e.gender===gender);
+}
+}
+const indiancricketer=new person('viratkholi','34','male','05/11/1988','rajivghandhistreet','delhi','delhi','600005','1234567890')
+const array=[indiancricketer]
+
+console.log(indiancricketer.get(array,'gender'))
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ class uber{
+constructor(price,distance){
+this.price=price
+this.distance=distance
+}
+get(){
+console.log(this.price*this.distance)
+}
+}
+const people1=new uber(50,10)
+const people2=new uber(5,10)
+people1.get();
+people2.get();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class circle  
+  {    
+    constructor(radius,colour)  
+    {  
+      this.radius=radius;  
+      this.colour=colour;  
+    }    
+    double()  {  
+  console.log(this.radius+" "+this.colour+" ")  
+    }  
+    area(){
+    console.log(2*22/7*this.radius)
+    }
+    radius(){
+    console.log(this.radius)
+    }
+    cir(){
+    console.log(22/7*this.radius*this.radius)
+    }
+    colour(){
+    console.log(this.colour)
+    }
+  }  
+   
+let circle1=new circle(1.0,"red");  
+let circle2=new circle(2.0,"black");  
+circle1.double();  
+circle2.double();  
+let area1=new circle(2)
+ area1.area()
+let colour1=new circle("blue")
+colour1.colour() 
+let cir1=new circle(5)
+cir1.cir()
+let radius1=new circle(12)
+radius1.radius()
